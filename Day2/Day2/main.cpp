@@ -1,5 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
-#define STUDY	12
+#define STUDY	1
 #include <stdio.h>
 #include <string.h>
 #include "example.h"
@@ -30,6 +30,12 @@ int main(void) {
 	printf("std : %s\r\n", str);
 
 #elif STUDY==4
+	int arr[10][10];
+	arr[3][5] = 7;
+	printf("Size of num_arr : %d\r\n", sizeof(arr));
+
+
+#elif STUDY==5
 
 	int num1 = 5;
 
@@ -39,7 +45,7 @@ int main(void) {
 		printf("num1은 10보다 작습니다.\r\n");
 	}
 
-#elif STUDY==5
+#elif STUDY==6
 
 	int num1 = 5;
 
@@ -51,7 +57,7 @@ int main(void) {
 		printf("num1은 음수입니다."); 
 	}
 
-#elif STUDY==6
+#elif STUDY==7
 
 	int num1 = 5;
 	
@@ -59,7 +65,7 @@ int main(void) {
 		printf("num1은 0이 아닙니다.\r\n");
 	}
 
-#elif STUDY==7
+#elif STUDY==8
 
 	int flag = 1;
 
@@ -74,7 +80,7 @@ int main(void) {
 			printf("해당사항없습니다."); 
 	}
 
-#elif STUDY==8
+#elif STUDY==9
 	
 	/*code1*/
 	//calculator : 숫자 2개 + 문자 입력 -> 결과 출력
@@ -83,16 +89,25 @@ int main(void) {
 
 	/*code1*/
 
-#elif STUDY==9
-	int i;
+#elif STUDY==10
+	int i, j;
 	int arr[100];
+	int arr1[10][10];
 	for (i = 0; i < 100; i++) {
 		arr[i] = i;
 	}
 	
 	PrintArr(arr, sizeof(arr)/sizeof(int), 2);
 
-#elif STUDY==10
+	for (i = 0; i < 10; i++) {
+		for (j = 0; j < 10; j++) {
+			arr1[i][j] = i * 100 + j;
+		}
+	}
+	PrintArr(&(arr1[0][0]), 100, 2);
+
+
+#elif STUDY==11
 	int i;
 	int arr[100];
 
@@ -111,7 +126,7 @@ int main(void) {
 
 	PrintArr(arr, 100, 2);
 
-#elif STUDY==11
+#elif STUDY==12
 
 	int i = 0;
 	while (1) {

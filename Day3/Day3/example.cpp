@@ -49,20 +49,13 @@ void Example1(void) {
 	return;
 }
 
-void PrintArr(int* arr, int size, int type) {
+void PrintArr_int(int* arr, int size, int type) {
 
-	printf("[Array Dumpling]\r\n");
-	
-	if (type == 2) {
-		printf("      ");
-	}
-
+	printf("[Array Dumpling]\r\n      ");
 	if (type == 1) {
 		for (int i = 0; i < size; i++) {
 			printf("arr[%d] = %d\r\n", i, arr[i]);
 		}
-
-	
 
 	}else if (type == 2) {
 		for (int i = 0; i < 10; i++) {
@@ -89,6 +82,44 @@ void PrintArr(int* arr, int size, int type) {
 	return;
 }
 
+void PrintArr_char(char* arr, int size, int type) {
+
+	printf("[Array Dumpling]\r\n");
+	if (type == 2) {
+		printf("      ");
+	}
+		
+	if (type == 1) {
+		for (int i = 0; i < size; i++) {
+			printf("arr[%d] = %c\r\n", i, arr[i]);
+		}
+
+	}
+
+	else if (type == 2) {
+		for (int i = 0; i < 10; i++) {
+			printf("%03d ", i);
+		}
+		printf("\r\n      ");
+		for (int i = 0; i < 40; i++) {
+			printf("-", i);
+		}
+		printf("\r\n");
+		for (int i = 0; i < size; i++) {
+			if (i % 10 == 0) {
+				printf("%03d | ", i / 10);
+			}
+			printf("   %c ", arr[i]);
+			if (i % 10 == 9) {
+				printf("\r\n");
+			}
+		}
+
+
+	}
+
+	return;
+}
 void Example2(int* arr, int size, int ex) {
 
 	for (int i = 0; i < size; i++) {
